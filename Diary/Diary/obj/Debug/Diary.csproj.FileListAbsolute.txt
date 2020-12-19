@@ -8,3 +8,4 @@ D:\C#\Projects\Diary\Diary\obj\Debug\Diary.exe
 D:\C#\Projects\Diary\Diary\obj\Debug\Diary.pdb
 D:\C#\Projects\Diary\Diary\obj\Debug\Diary.Registration.resources
 D:\C#\Projects\Diary\Diary\obj\Debug\Diary.Welcome.resources
+D:\C#\Projects\Diary\Diary\obj\Debug\Diary.Home.resources
