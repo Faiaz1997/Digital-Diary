@@ -1,0 +1,10 @@
+D:\C#\Projects\Diary\Diary\bin\Debug\Diary.exe.config
+D:\C#\Projects\Diary\Diary\bin\Debug\Diary.exe
+D:\C#\Projects\Diary\Diary\bin\Debug\Diary.pdb
+D:\C#\Projects\Diary\Diary\obj\Debug\Diary.csprojResolveAssemblyReference.cache
+D:\C#\Projects\Diary\Diary\obj\Debug\Diary.Properties.Resources.resources
+D:\C#\Projects\Diary\Diary\obj\Debug\Diary.csproj.GenerateResource.Cache
+D:\C#\Projects\Diary\Diary\obj\Debug\Diary.exe
+D:\C#\Projects\Diary\Diary\obj\Debug\Diary.pdb
+D:\C#\Projects\Diary\Diary\obj\Debug\Diary.Registration.resources
+D:\C#\Projects\Diary\Diary\obj\Debug\Diary.Welcome.resources
