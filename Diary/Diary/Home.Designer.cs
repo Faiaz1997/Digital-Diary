@@ -34,13 +34,12 @@
             this.Update = new System.Windows.Forms.Button();
             this.Remove = new System.Windows.Forms.Button();
             this.EventName = new System.Windows.Forms.TextBox();
-            this.EventDate = new System.Windows.Forms.DateTimePicker();
             this.PriorityBox = new System.Windows.Forms.ComboBox();
             this.View = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.EventDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,15 +99,6 @@
             this.EventName.Size = new System.Drawing.Size(460, 20);
             this.EventName.TabIndex = 7;
             // 
-            // EventDate
-            // 
-            this.EventDate.CustomFormat = "dd/MM/yyyy";
-            this.EventDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.EventDate.Location = new System.Drawing.Point(613, 48);
-            this.EventDate.Name = "EventDate";
-            this.EventDate.Size = new System.Drawing.Size(200, 20);
-            this.EventDate.TabIndex = 8;
-            // 
             // PriorityBox
             // 
             this.PriorityBox.FormattingEnabled = true;
@@ -162,21 +152,22 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "Priority";
             // 
-            // label3
+            // EventDate
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(568, 51);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 13);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Date";
+            this.EventDate.CustomFormat = "dd-MM-yyyy";
+            this.EventDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.EventDate.Location = new System.Drawing.Point(613, 48);
+            this.EventDate.Name = "EventDate";
+            this.EventDate.Size = new System.Drawing.Size(200, 20);
+            this.EventDate.TabIndex = 8;
+            this.EventDate.Value = new System.DateTime(2020, 12, 27, 1, 55, 43, 0);
+            this.EventDate.Visible = false;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 496);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
@@ -206,13 +197,12 @@
         private System.Windows.Forms.Button Update;
         private System.Windows.Forms.Button Remove;
         private System.Windows.Forms.TextBox EventName;
-        private System.Windows.Forms.DateTimePicker EventDate;
         private System.Windows.Forms.ComboBox PriorityBox;
         private System.Windows.Forms.Button View;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker EventDate;
 
     }
 }

@@ -34,7 +34,7 @@ namespace Diary
             SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-V0HR07H\SQLEXPRESS;Initial Catalog=DigitalDiary;Integrated Security=True");
             connection.Open();
              
-            string sql = "INSERT INTO [dbo].[event]([Event],[Text],[Priority],[Date])VALUES('" + EventName.Text + "','" + text.Text + "','" + PriorityBox.Text + "','" + this.EventDate.Text + "')";
+            string sql = "INSERT INTO [dbo].[event]([Event],[Text],[Priority],[Date])VALUES('" + EventName.Text + "','" + text.Text + "','" + PriorityBox.Text + "','" + DateTime.Today + "')";
 
             SqlCommand command = new SqlCommand(sql, connection);
             int result = command.ExecuteNonQuery();
@@ -51,6 +51,9 @@ namespace Diary
             {
                 MessageBox.Show("Event added successfully");
                 text.Text = string.Empty;
+                EventName.Text = string.Empty;
+                PriorityBox.Text = string.Empty;
+                EventDate.Text = string.Empty;
             }
             else
                 MessageBox.Show("Error in adding Event");
@@ -90,7 +93,7 @@ namespace Diary
         {
              SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-V0HR07H\SQLEXPRESS;Initial Catalog=DigitalDiary;Integrated Security=True");
             connection.Open();
-            string sql = "update [dbo].[event] set Text='" + text.Text + "' , Date= '" + EventDate.Text + "', Priority= '" + PriorityBox.Text + "' where Event='" + EventName.Text + "'";
+            string sql = "update [dbo].[event] set Text='" + text.Text + "' , Date= '" + DateTime.Today + "', Priority= '" + PriorityBox.Text + "' where Event='" + EventName.Text + "'";
 
             SqlCommand command = new SqlCommand(sql, connection);
             int result = command.ExecuteNonQuery();
@@ -119,16 +122,17 @@ namespace Diary
             sda.Fill(dt);
             dataGridView1.DataSource = dt;
             con.Close();
+
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
             DataGridViewRow selectedRow = dataGridView1.Rows[index];
-            EventName.Text = selectedRow.Cells[1].Value.ToString();
-            PriorityBox.Text = selectedRow.Cells[2].Value.ToString();
-            EventDate.Text = selectedRow.Cells[3].Value.ToString();
-            text.Text = selectedRow.Cells[4].Value.ToString();
+            EventName.Text = selectedRow.Cells[0].Value.ToString();
+            PriorityBox.Text = selectedRow.Cells[1].Value.ToString();
+            EventDate.Text = selectedRow.Cells[2].Value.ToString();
+            text.Text = selectedRow.Cells[3].Value.ToString();
         }
     }
 }
