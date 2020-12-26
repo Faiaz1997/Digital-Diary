@@ -28,50 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Event = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Priority = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Back = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
             this.text = new System.Windows.Forms.TextBox();
-            this.Modify = new System.Windows.Forms.Button();
+            this.Update = new System.Windows.Forms.Button();
             this.Remove = new System.Windows.Forms.Button();
+            this.EventName = new System.Windows.Forms.TextBox();
+            this.EventDate = new System.Windows.Forms.DateTimePicker();
+            this.PriorityBox = new System.Windows.Forms.ComboBox();
+            this.View = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Event,
-            this.Date,
-            this.Priority});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(343, 472);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Event
-            // 
-            this.Event.HeaderText = "Event";
-            this.Event.Name = "Event";
-            // 
-            // Date
-            // 
-            this.Date.HeaderText = "Date";
-            this.Date.Name = "Date";
-            this.Date.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Priority
-            // 
-            this.Priority.HeaderText = "Priority";
-            this.Priority.Name = "Priority";
-            // 
             // Back
             // 
-            this.Back.Location = new System.Drawing.Point(814, 379);
+            this.Back.Location = new System.Drawing.Point(803, 461);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(75, 23);
             this.Back.TabIndex = 2;
@@ -81,7 +53,7 @@
             // 
             // Add
             // 
-            this.Add.Location = new System.Drawing.Point(733, 350);
+            this.Add.Location = new System.Drawing.Point(361, 461);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(75, 23);
             this.Add.TabIndex = 3;
@@ -91,43 +63,101 @@
             // 
             // text
             // 
-            this.text.Location = new System.Drawing.Point(361, 12);
+            this.text.Location = new System.Drawing.Point(361, 87);
             this.text.Multiline = true;
             this.text.Name = "text";
             this.text.Size = new System.Drawing.Size(517, 332);
             this.text.TabIndex = 4;
             // 
-            // Modify
+            // Update
             // 
-            this.Modify.Location = new System.Drawing.Point(733, 379);
-            this.Modify.Name = "Modify";
-            this.Modify.Size = new System.Drawing.Size(75, 23);
-            this.Modify.TabIndex = 5;
-            this.Modify.Text = "Modify";
-            this.Modify.UseVisualStyleBackColor = true;
-            this.Modify.Click += new System.EventHandler(this.Modify_Click);
+            this.Update.Location = new System.Drawing.Point(523, 461);
+            this.Update.Name = "Update";
+            this.Update.Size = new System.Drawing.Size(75, 23);
+            this.Update.TabIndex = 5;
+            this.Update.Text = "Update";
+            this.Update.UseVisualStyleBackColor = true;
+            this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
             // Remove
             // 
-            this.Remove.Location = new System.Drawing.Point(814, 350);
+            this.Remove.Location = new System.Drawing.Point(442, 461);
             this.Remove.Name = "Remove";
             this.Remove.Size = new System.Drawing.Size(75, 23);
             this.Remove.TabIndex = 6;
             this.Remove.Text = "Remove";
             this.Remove.UseVisualStyleBackColor = true;
-            this.Remove.Click += new System.EventHandler(this.button2_Click);
+            this.Remove.Click += new System.EventHandler(this.Remove_Click);
+            // 
+            // EventName
+            // 
+            this.EventName.Location = new System.Drawing.Point(361, 12);
+            this.EventName.Multiline = true;
+            this.EventName.Name = "EventName";
+            this.EventName.Size = new System.Drawing.Size(517, 20);
+            this.EventName.TabIndex = 7;
+            this.EventName.Text = "Event";
+            // 
+            // EventDate
+            // 
+            this.EventDate.CustomFormat = "dd/MM/yyyy";
+            this.EventDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.EventDate.Location = new System.Drawing.Point(523, 49);
+            this.EventDate.Name = "EventDate";
+            this.EventDate.Size = new System.Drawing.Size(200, 20);
+            this.EventDate.TabIndex = 8;
+            // 
+            // PriorityBox
+            // 
+            this.PriorityBox.FormattingEnabled = true;
+            this.PriorityBox.Items.AddRange(new object[] {
+            "High",
+            "Medium",
+            "Low"});
+            this.PriorityBox.Location = new System.Drawing.Point(361, 48);
+            this.PriorityBox.Name = "PriorityBox";
+            this.PriorityBox.Size = new System.Drawing.Size(121, 21);
+            this.PriorityBox.TabIndex = 9;
+            this.PriorityBox.Text = "Priority";
+            // 
+            // View
+            // 
+            this.View.Location = new System.Drawing.Point(604, 461);
+            this.View.Name = "View";
+            this.View.Size = new System.Drawing.Size(75, 23);
+            this.View.TabIndex = 10;
+            this.View.Text = "View";
+            this.View.UseVisualStyleBackColor = true;
+            this.View.Click += new System.EventHandler(this.View_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(343, 472);
+            this.dataGridView1.TabIndex = 11;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 496);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.View);
+            this.Controls.Add(this.PriorityBox);
+            this.Controls.Add(this.EventDate);
+            this.Controls.Add(this.EventName);
             this.Controls.Add(this.Remove);
-            this.Controls.Add(this.Modify);
+            this.Controls.Add(this.Update);
             this.Controls.Add(this.text);
             this.Controls.Add(this.Add);
             this.Controls.Add(this.Back);
-            this.Controls.Add(this.dataGridView1);
             this.Name = "Home";
             this.Text = "Home";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Home_FormClosed);
@@ -139,15 +169,16 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Event;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Priority;
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.TextBox text;
-        private System.Windows.Forms.Button Modify;
+        private System.Windows.Forms.Button Update;
         private System.Windows.Forms.Button Remove;
+        private System.Windows.Forms.TextBox EventName;
+        private System.Windows.Forms.DateTimePicker EventDate;
+        private System.Windows.Forms.ComboBox PriorityBox;
+        private System.Windows.Forms.Button View;
+        private System.Windows.Forms.DataGridView dataGridView1;
 
     }
 }
