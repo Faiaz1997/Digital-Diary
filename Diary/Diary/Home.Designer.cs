@@ -38,6 +38,9 @@
             this.PriorityBox = new System.Windows.Forms.ComboBox();
             this.View = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,18 +94,17 @@
             // 
             // EventName
             // 
-            this.EventName.Location = new System.Drawing.Point(361, 12);
+            this.EventName.Location = new System.Drawing.Point(418, 12);
             this.EventName.Multiline = true;
             this.EventName.Name = "EventName";
-            this.EventName.Size = new System.Drawing.Size(517, 20);
+            this.EventName.Size = new System.Drawing.Size(460, 20);
             this.EventName.TabIndex = 7;
-            this.EventName.Text = "Event";
             // 
             // EventDate
             // 
             this.EventDate.CustomFormat = "dd/MM/yyyy";
             this.EventDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.EventDate.Location = new System.Drawing.Point(523, 49);
+            this.EventDate.Location = new System.Drawing.Point(613, 48);
             this.EventDate.Name = "EventDate";
             this.EventDate.Size = new System.Drawing.Size(200, 20);
             this.EventDate.TabIndex = 8;
@@ -114,11 +116,10 @@
             "High",
             "Medium",
             "Low"});
-            this.PriorityBox.Location = new System.Drawing.Point(361, 48);
+            this.PriorityBox.Location = new System.Drawing.Point(418, 48);
             this.PriorityBox.Name = "PriorityBox";
             this.PriorityBox.Size = new System.Drawing.Size(121, 21);
             this.PriorityBox.TabIndex = 9;
-            this.PriorityBox.Text = "Priority";
             // 
             // View
             // 
@@ -143,11 +144,41 @@
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(361, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Event";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(361, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Priority";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(568, 51);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(30, 13);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Date";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 496);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.View);
             this.Controls.Add(this.PriorityBox);
@@ -179,6 +210,9 @@
         private System.Windows.Forms.ComboBox PriorityBox;
         private System.Windows.Forms.Button View;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
 
     }
 }
